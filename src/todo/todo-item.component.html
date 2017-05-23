@@ -6,7 +6,7 @@
         <input mdInput [(ngModel)]="todo.name" (keyup)="onKeyUp($event)">
     </md-input-container>
     <button class="menu-button" md-icon-button [mdMenuTriggerFor]="menu">
-        <i class="material-icons">more_vert</i>
+        <md-icon>more_vertical</md-icon>
     </button>
     <md-menu #menu="mdMenu">
         <button md-menu-item (click)="toggleEditMode()"> {{editMode ? 'Done editing' : 'Edit'}}</button>

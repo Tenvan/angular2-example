@@ -1,13 +1,15 @@
 const {
-        BabelPlugin,
-        FuseBox,
-        SassPlugin,
         CSSPlugin,
-        WebIndexPlugin,
-        TypeScriptHelpers,
-        JSONPlugin,
+        FuseBox,
         HTMLPlugin,
+        JSONPlugin,
+        RawPlugin,
+        SassPlugin,
+        TypeScriptHelpers,
+        WebIndexPlugin,
       } = require('fuse-box');
+
+const {Ng2TemplatePlugin} = require('ng2-fused');
 
 const path = require('path');
 
@@ -15,19 +17,16 @@ const fuse = FuseBox.init({
   homeDir: `src/`,
   output:  `dist/$name.js`,
   plugins: [
-    BabelPlugin({
-      config:        {
-        sourceMaps: true,
-        presets:    ['latest'],
-      },
-      limit2project: false,
-    }),
+    Ng2TemplatePlugin(),
+    ['*.html', RawPlugin()],
+    ['*.css', RawPlugin()],
     WebIndexPlugin({
       title:    'FuseBox + Angular',
       template: 'src/index.html',
     }), [
       SassPlugin({
         outputStyle: 'compressed',
+        importer:    true,
       }),
       CSSPlugin(),
     ],
@@ -38,6 +37,8 @@ const fuse = FuseBox.init({
     }),
   ],
 });
+
+fuse.register('rectangular', {homeDir: 'node_modules/rectangular', main: 'index.js', instructions: '**/**.js'});
 
 // setup development sever
 fuse.dev({

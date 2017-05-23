@@ -4,7 +4,10 @@
   font-family: Roboto, "Helvetica Neue", sans-serif;
   margin-bottom: 10px;
   opacity: 0.3;
-  @media (max-width: 400px) {
+}
+
+@media (max-width: 400px) {
+  .main-title {
     font-size: 25px;
   }
 }
