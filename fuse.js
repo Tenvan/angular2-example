@@ -15,13 +15,6 @@ const fuse = FuseBox.init({
   homeDir: `src/`,
   output:  `dist/$name.js`,
   plugins: [
-    BabelPlugin({
-      config:        {
-        sourceMaps: true,
-        presets:    ['latest'],
-      },
-      limit2project: false,
-    }),
     WebIndexPlugin({
       title:    'FuseBox + Angular',
       template: 'src/index.html',

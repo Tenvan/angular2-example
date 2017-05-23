@@ -1,6 +1,8 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Todo } from './todo.model';
 
+let Hypergrid    = require('fin-hypergrid/src/Hypergrid');
+
 console.log('hello world');
 
 @Component({

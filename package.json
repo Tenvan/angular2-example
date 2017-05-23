@@ -32,7 +32,7 @@
     "chai": "^3.5.0",
     "cpx": "^1.5.0",
     "cross-env": "^5.0.0",
-    "fuse-box": "2.1.0-beta.7",
+    "fuse-box": "^2.1.0-beta.9",
     "jsdom": "^10.1.0",
     "jsdom-no-contextify": "^3.1.0",
     "mocha": "^3.4.1",
@@ -60,7 +60,9 @@
     "angular-in-memory-web-api": "0.3.2",
     "babel-preset-latest": "^6.24.1",
     "core-js": "2.4.1",
+    "fin-hypergrid": "^1.3.0",
     "lodash": "4.17.4",
+    "rectangular": "^1.0.1",
     "rxjs": "5.4.0",
     "zone.js": "0.8.11"
   },
