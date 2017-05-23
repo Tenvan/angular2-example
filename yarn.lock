@@ -61,6 +61,12 @@
   version "1.0.0-beta.3-2"
   resolved "https://registry.yarnpkg.com/@covalent/http/-/http-1.0.0-beta.3-2.tgz#4e40f570195defe7432a1e487ae5bae837c09003"
 
+"@types/acorn@^4.0.2":
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@types/acorn/-/acorn-4.0.2.tgz#5c37dade857a53c14258c914d43e634076aec3fd"
+  dependencies:
+    "@types/estree" "*"
+
 "@types/chai@^3.5.2":
   version "3.5.2"
   resolved "https://registry.yarnpkg.com/@types/chai/-/chai-3.5.2.tgz#c11cd2817d3a401b7ba0f5a420f35c56139b1c1e"
@@ -68,6 +74,10 @@
 "@types/core-js@^0.9.41":
   version "0.9.41"
   resolved "https://registry.yarnpkg.com/@types/core-js/-/core-js-0.9.41.tgz#cfeceb63c2beaa29f882252c7c18e0e9471ff4e2"
+
+"@types/estree@*":
+  version "0.0.35"
+  resolved "https://registry.yarnpkg.com/@types/estree/-/estree-0.0.35.tgz#8999974b34028686a8d61a719e61c138d3755107"
 
 "@types/lodash@^4.14.64":
   version "4.14.64"
@@ -1428,6 +1438,10 @@ find-index@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/find-index/-/find-index-0.1.1.tgz#675d358b2ca3892d795a1ab47232f8b6e2e0dde4"
 
+find-parent-dir@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/find-parent-dir/-/find-parent-dir-0.3.0.tgz#33c44b429ab2b2f0646299c5f9f718f376ff8d54"
+
 find-up@^1.0.0, find-up@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/find-up/-/find-up-1.1.2.tgz#6b2e9822b1a2ce0a60ab64d610eccad53cb24d0f"
@@ -2383,6 +2397,14 @@ negotiator@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
 
+ng2-fused@^0.3.3:
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/ng2-fused/-/ng2-fused-0.3.3.tgz#78905803d7e3f959b63c653376172d8b849021e2"
+  dependencies:
+    "@types/acorn" "^4.0.2"
+    acorn "^4.0.3"
+    escodegen "^1.8.1"
+
 node-gyp@^3.3.1:
   version "3.6.1"
   resolved "https://registry.yarnpkg.com/node-gyp/-/node-gyp-3.6.1.tgz#19561067ff185464aded478212681f47fd578cbc"
@@ -2414,6 +2436,12 @@ node-pre-gyp@^0.6.29:
     semver "^5.3.0"
     tar "^2.2.1"
     tar-pack "^3.4.0"
+
+node-sass-tilde-importer@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/node-sass-tilde-importer/-/node-sass-tilde-importer-1.0.0.tgz#653d048a270464a1865ef9a99cc80ee2d80f9c97"
+  dependencies:
+    find-parent-dir "^0.3.0"
 
 node-sass@^4.5.3:
   version "4.5.3"
@@ -3237,7 +3265,7 @@ subarg@^1.0.0:
   dependencies:
     minimist "^1.1.0"
 
-supports-color@3.1.2, supports-color@^3.1.2:
+supports-color@3.1.2:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-3.1.2.tgz#72a262894d9d408b956ca05ff37b2ed8a6e2a2d5"
   dependencies:
@@ -3247,7 +3275,7 @@ supports-color@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-2.0.0.tgz#535d045ce6b6363fa40117084629995e9df324c7"
 
-supports-color@^3.2.3:
+supports-color@^3.1.2, supports-color@^3.2.3:
   version "3.2.3"
   resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-3.2.3.tgz#65ac0504b3954171d8a64946b2ae3cbb8a5f54f6"
   dependencies:

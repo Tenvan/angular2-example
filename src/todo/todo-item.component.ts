@@ -1,20 +1,21 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Todo } from './todo.model';
 
-let Hypergrid    = require('fin-hypergrid/src/Hypergrid');
+let Hypergrid = require('fin-hypergrid/src/Hypergrid');
 
 console.log('hello world');
 
 @Component({
-  selector: 'todo-item',
-  template: require('./todo-item.component.html')
+  selector:    'todo-item',
+  styleUrls:   [ './todo-item.component.css' ],
+  templateUrl: './todo-item.component.html'
 })
 export class TodoItemComponent implements OnInit {
   @Input() todo: Todo;
 
   @Output() deleteTodo = new EventEmitter<Todo>();
 
-           editMode: boolean;
+  editMode: boolean;
 
   ngOnInit() {
     this.editMode = false;

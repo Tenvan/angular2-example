@@ -4,6 +4,7 @@
   "description": "",
   "main": "main.js",
   "scripts": {
+    "sass": "node-sass src -o src --include-path node_modules --output-style expanded --importer=node_modules/node-sass-tilde-importer -q",
     "prestart": "rimraf dist .fusebox && cpx ./src/index.html ./dist/",
     "start": "node ./fuse.js",
     "test": "cross-env TS_NODE_PROJECT=./src/tsconfig.mocha.json mocha --opts ./test/mocha.travis.opts",
@@ -36,7 +37,9 @@
     "jsdom": "^10.1.0",
     "jsdom-no-contextify": "^3.1.0",
     "mocha": "^3.4.1",
+    "ng2-fused": "^0.3.3",
     "node-sass": "^4.5.3",
+    "node-sass-tilde-importer": "^1.0.0",
     "nyc": "^10.3.2",
     "rimraf": "^2.6.1",
     "sinon": "^2.2.0",
